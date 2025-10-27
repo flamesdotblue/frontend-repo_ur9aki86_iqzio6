@@ -23,13 +23,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-gradient-to-b from-black to-[#0b0b0b]">
+    <section id="services" className="relative py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-3xl" />
+        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute -bottom-24 right-10 h-80 w-80 rounded-full bg-indigo-600/15 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
             <Sparkles size={14} className="text-cyan-300" /> Our Services
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-white">Creative built for impact</h2>
@@ -42,17 +43,17 @@ export default function Services() {
           {services.map(({ icon: Icon, title, desc, perks }) => (
             <div
               key={title}
-              className="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-6 hover:from-white/10 hover:border-white/20 transition"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition backdrop-blur-xl"
             >
-              <div className="h-12 w-12 rounded-xl bg-white text-black flex items-center justify-center">
-                <Icon size={20} />
+              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-indigo-600 text-black flex items-center justify-center shadow-[0_0_0_1px_rgba(255,255,255,0.2)_inset]">
+                <Icon size={20} className="text-black" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
               <p className="mt-2 text-sm text-white/70">{desc}</p>
               <ul className="mt-4 space-y-2">
                 {perks.map((p) => (
                   <li key={p} className="text-sm text-white/70 flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-white/60" /> {p}
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-300/70" /> {p}
                   </li>
                 ))}
               </ul>
@@ -60,7 +61,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div id="work" className="mt-16 rounded-2xl border border-white/10 p-6 bg-white/5">
+        <div id="work" className="mt-16 rounded-2xl border border-white/10 p-6 bg-white/5 backdrop-blur-xl">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <h3 className="text-2xl font-semibold text-white">Featured Work</h3>
@@ -69,8 +70,8 @@ export default function Services() {
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 flex-1 w-full">
-              {['/placeholder1.jpg','/placeholder2.jpg','/placeholder3.jpg','/placeholder4.jpg','/placeholder5.jpg','/placeholder6.jpg'].map((src, i) => (
-                <div key={i} className="aspect-[4/3] rounded-lg bg-white/10" />
+              {['1','2','3','4','5','6'].map((i) => (
+                <div key={i} className="aspect-[4/3] rounded-lg bg-gradient-to-br from-white/10 to-white/5 border border-white/10" />
               ))}
             </div>
           </div>

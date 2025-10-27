@@ -12,12 +12,12 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl/50 backdrop-saturate-150 bg-black/30 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="flex items-center gap-2">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500 to-cyan-400 text-white">
-              <Rocket size={18} />
+            <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-600 text-black">
+              <Rocket size={18} className="text-black" />
             </div>
             <span className="text-white font-semibold tracking-wide">Media Triple Seven</span>
           </a>
@@ -34,7 +34,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-md bg-white text-black px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
+              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-cyan-400 to-indigo-600 text-black px-4 py-2 text-sm font-semibold shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset] hover:opacity-90 transition"
             >
               Get Started
             </a>
@@ -65,7 +65,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-md bg-white text-black px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
+                className="mt-2 inline-flex items-center justify-center rounded-md bg-gradient-to-r from-cyan-400 to-indigo-600 text-black px-4 py-2 text-sm font-semibold hover:opacity-90 transition"
               >
                 Get Started
               </a>
